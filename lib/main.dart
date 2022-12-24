@@ -1,4 +1,3 @@
-import 'package:crunch_bite/screens/Splash/index.dart';
 import 'package:crunch_bite/screens/Welcome/index.dart';
 import 'package:flutter/material.dart';
 

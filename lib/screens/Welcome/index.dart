@@ -1,3 +1,5 @@
+import 'package:crunch_bite/common/components/Buttons/index.dart';
+import 'package:crunch_bite/common/components/Dot/index.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -10,7 +12,6 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    // Color myColor = Color(0xff123456);
     return Scaffold(
         body: Container(
             alignment: Alignment.center,
@@ -24,7 +25,10 @@ class _WelcomeState extends State<Welcome> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/image/logo_white.png'),
+                  Image.asset(
+                    'assets/image/logo_white.png',
+                    fit: BoxFit.contain,
+                  ),
                   const Text(
                     "Crunchy",
                     style: TextStyle(
@@ -32,13 +36,13 @@ class _WelcomeState extends State<Welcome> {
                         color: Colors.white,
                         fontWeight: FontWeight.w700),
                   ),
-                  SubSection(),
+                  const SubSection(),
                   const Divider(
                     thickness: 1.5,
                     color: Colors.white38,
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    padding: EdgeInsets.only(top: 10, bottom: 20),
                     child: Text(
                       "Order from top restuarants",
                       style: TextStyle(
@@ -47,16 +51,7 @@ class _WelcomeState extends State<Welcome> {
                           fontWeight: FontWeight.w400),
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () => {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFF8620E),
-                        minimumSize: const Size.fromHeight(50), // NEW
-
-                        textStyle: const TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600)),
-                    child: const Text("Get started"),
-                  )
+                  const PrimaryButton(title: "Get Started")
                 ],
               ),
             )));
@@ -64,11 +59,12 @@ class _WelcomeState extends State<Welcome> {
 }
 
 class SubSection extends StatelessWidget {
-  // const SubSection({Key? key}) : super(key: key);
+  const SubSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10, bottom: 10),
       child: Row(
         children: const [
           Text(
@@ -89,22 +85,6 @@ class SubSection extends StatelessWidget {
                 fontSize: 20, color: Colors.white, fontWeight: FontWeight.w400),
           )
         ],
-      ),
-    );
-  }
-}
-
-class Dot extends StatelessWidget {
-  const Dot({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 5,
-      height: 5,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.deepPurpleAccent,
       ),
     );
   }
