@@ -9,20 +9,6 @@ class OtpScreen extends StatefulWidget {
   State<OtpScreen> createState() => _OtpScreenState();
 }
 
-class BlueBox extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        color: Colors.blue,
-        border: Border.all(),
-      ),
-    );
-  }
-}
-
 class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
@@ -43,8 +29,6 @@ class _OtpScreenState extends State<OtpScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        // toolbarHeight: 0,
-        // automaticallyImplyLeading: false, // Don't show the leading button
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,18 +37,15 @@ class _OtpScreenState extends State<OtpScreen> {
               onPressed: () => Navigator.pop(context),
               icon: Icon(Icons.arrow_back, color: Colors.black),
             ),
-            // Your widgets here
           ],
         ),
       ),
       body: Container(
           width: width,
           margin: const EdgeInsets.symmetric(horizontal: 15.0),
-          // child: FittedBox(
           child: Column(children: [
             const Text(
               "Enter your mobile number to get OTP",
-              // textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
               style: TextStyle(
@@ -154,7 +135,6 @@ class _OtpScreenState extends State<OtpScreen> {
           ]
               // ),
               )),
-      // Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: []),
     );
   }
 }
