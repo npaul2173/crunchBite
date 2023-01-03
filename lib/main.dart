@@ -1,4 +1,4 @@
-import 'package:crunch_bite/screens/Welcome/index.dart';
+import 'package:crunch_bite/screens/location/AllowLocationScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
           fontFamily: 'LexendDeca',
           primarySwatch: Colors.blue,
         ),
-        home: const Welcome());
+        home: const AllowLocationScreen());
   }
 }

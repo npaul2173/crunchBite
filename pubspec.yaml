@@ -65,6 +65,8 @@ flutter:
     - assets/image/logo.png
     - assets/image/welcome_bg.png
     - assets/image/logo_white.png
+    - assets/image/location.png
+
   fonts:
     - family: LexendDeca
       fonts:
