@@ -65,9 +65,10 @@ class AllowLocationScreen extends StatelessWidget {
                   child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  margin:
-                      const EdgeInsets.symmetric(vertical: 20.0, horizontal: 2),
-                  child: PrimaryButton(title: "Allow Location access"),
+                  margin: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 2),
+                  child: PrimaryButton(title: "Allow Location access",onPrimaryBtnClick:() => {
+                      Navigator.pushNamed(context, '/landingPage')
+                  },),
                 ),
               )),
               Container(

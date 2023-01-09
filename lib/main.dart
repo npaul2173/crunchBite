@@ -1,4 +1,9 @@
+import 'package:crunch_bite/screens/LandingPage/LandingPageScreen.dart';
+import 'package:crunch_bite/screens/OtpScreen/index.dart';
+import 'package:crunch_bite/screens/Splash/index.dart';
+import 'package:crunch_bite/screens/Welcome/index.dart';
 import 'package:crunch_bite/screens/location/AllowLocationScreen.dart';
+//import 'package:crunch_bite/screens/location/AllowLocationScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +22,16 @@ class MyApp extends StatelessWidget {
           fontFamily: 'LexendDeca',
           primarySwatch: Colors.blue,
         ),
-        home: const AllowLocationScreen());
+        // home: const Splash()
+        initialRoute: '/',
+        routes: {
+            '/': (context) => const Splash(),
+            '/welcome': (context) => const Welcome(),
+            '/otp': (context) => const OtpScreen(),
+            '/allowLocation': (context) => const AllowLocationScreen(),
+            '/landingPage': (context) => const LandingPageScreen(),
+        },
+        );
+        
   }
 }
