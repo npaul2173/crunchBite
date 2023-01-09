@@ -8,6 +8,13 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+   @override
+  void initState() {
+    super.initState();
+    new Future.delayed(
+        const Duration(seconds: 2),
+        () =>   Navigator.pushNamed(context, '/allowLocation'));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
