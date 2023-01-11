@@ -1,4 +1,4 @@
-import 'package:crunch_bite/screens/LandingPage/LandingPageScreen.dart';
+import 'package:crunch_bite/screens/landingPage/LandingPageScreen.dart';
 import 'package:crunch_bite/screens/OtpScreen/index.dart';
 import 'package:crunch_bite/screens/Splash/index.dart';
 import 'package:crunch_bite/screens/Welcome/index.dart';
